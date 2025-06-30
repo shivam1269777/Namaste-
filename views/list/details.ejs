@@ -37,7 +37,7 @@
 
     </div >
     <% } %>
-    <% if( !currUser._id.equals(datad.owner._id)) {%>
+    <% if(currUser._id&&!currUser._id.equals(datad.owner._id)) {%>
     <form method="get" action="/lists/<%= datad.id %>/book">
       <button class="book ">Book Now</button>
     </form>
