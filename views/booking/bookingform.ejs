@@ -1,0 +1,45 @@
+<% layout('./layout/boilerplate') -%>
+<body>
+    <br>
+    <div class="row">
+        <div class="col-8 offset-2">
+         <h3>Fill the Details</h3>
+    <form  method="post" action="/lists/<%= hotel.id %>/book" novalidate class="needs-validation" >
+<div class="mb-3">
+    <label for="checkIn" class="form-label">Check-in Date:</label>
+    <input name="checkIn" type="date" id="checkIn" class="form-control" required/>
+<div class="invalid-feedback">
+      Please Enter Check-in date
+    </div></div>
+
+      <div class="mb-3">
+        <label for="checkOut" class="form-label">Check-Out Date:</label>
+<input type="date" name="checkOut" id="checkOut"  class="form-control" required />
+<div  class="invalid-feedback">
+        Please Enter the Check-Out date
+      </div>
+
+      </div>     
+      <div class="mb-3">
+        <label for="guests" class="form-label">Number of Guests</label>
+<input type="number" name="guests" id="guests"class="form-control" required/>
+<div  class="invalid-feedback">
+        Please Enter the Check-Out date
+      </div>
+      </div>     
+      
+<button type="submit" class="btn btn-success">Finish</button>
+
+</form>
+<br>
+<br>
+    </div></div>
+    <script>
+     let checkIn= document.getElementById("checkIn");
+       let checkOut= document.getElementById("checkOut");
+      checkIn.addEventListener("change", () => {
+    checkOut.min = checkIn.value;
+  });
+    </script>
+   
+</body>

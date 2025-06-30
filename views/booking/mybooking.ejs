@@ -1,0 +1,25 @@
+<% layout('./layout/boilerplate') -%>
+<h2 class="my-3 col-8 offset-2">Your Booking History</h2>
+<div class="row">
+<%bookings.forEach(booking => {%>
+    <div class="col-6 offset-2">
+<div class="card list-all-show" >
+  <img src="<%=booking.hotel.image.url  %>" class="card-img-top" alt="hotel image">
+  <div class="card-body">
+    <h5 class="card-title">
+              <%= booking.hotel.title %>
+            </h5>
+    <p class="card-text">
+       Location:<%= booking.hotel.location %><br>
+       Check-in:<%= booking.checkIn.toDateString() %><br>
+        Check-out:<%= booking.checkOut.toDateString() %><br>
+        Guests: <%= booking.guests %><br>
+              Booked On: <%= booking.createdAt.toDateString() %>
+    </p>
+  </div>
+</div>
+
+    </div>
+ 
+<% }) %>
+</div>

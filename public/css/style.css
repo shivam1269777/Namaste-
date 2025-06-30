@@ -1,0 +1,106 @@
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{flex:1;}
+.shrink{
+    height: 80px;
+}
+.fa-hands-praying{
+    color:#fe424d;
+    font-size: 50px;
+}
+
+.nav-link{
+    color: black !important;
+}
+
+.f-info-links a{
+    color:black;
+    text-decoration: none;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links{
+    width:100%;
+}
+.f-info-social{
+    width:100%;
+    margin-top: 10px;
+}
+
+.fa-brands{
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.f-info{
+    display: flex;
+    height: 6rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: #ebebee;
+}
+
+.list-all{border: none !important;
+margin-bottom: 20px;}
+
+.list-all-show{border: none !important;}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    background-size: cover !important;
+    width: 100%;
+
+}
+
+.card-body{padding: 0px !important;}
+
+.list-link{text-decoration: none;}
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+.button{background-color:#fe424d;
+color: aliceblue;
+padding-left: 20px;
+padding-right: 20px;
+font-size: 20px;
+}
+
+.card-img-top{
+    height: 40vh;
+}
+
+.d-buttons{
+    display: flex;
+    gap: 150px;
+}
+
+.del{padding-left: 20px;
+padding-right: 20px;
+font-size: 20px;
+ }
+
+  #map {
+      width: 80vh;
+      height: 400px;
+    }
+
+.book{background-color:green;
+color:#ebebee;
+border-radius: 15px;
+padding:8px;}

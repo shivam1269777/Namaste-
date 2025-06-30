@@ -1,0 +1,64 @@
+<% layout('./layout/boilerplate') -%>
+<body>
+  
+    <div class="row">
+        <div class="col-8 offset-2">
+            <br>
+            <h3>Add new item</h3>
+            <form method="post" action="/lists" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3"><label for="title" class="form-label">Title</label>
+<input name="list[title]" type="text" placeholder="Home" class="form-control" required/>
+<div class="valid-feedback">
+      You Enter a Good Title
+    </div>
+</div>
+          
+<div class="mb-3">
+<label for="description" class="form-label">Description</label>
+<textarea name="list[description]" type="text" placeholder="Worlds best place to live" class="form-control" required></textarea>
+<div  class="invalid-feedback">
+        Please enter description
+      </div>
+</div>
+
+<div class="mb-3">
+    <label for="image" class="form-label">Upload image</label>
+    <input name="list[image]" type="file" class="form-control" required />
+</div>
+<div class="row">
+<div class="mb-3 col-md-4"> 
+     <label for="price" class="form-label">Price</label>
+<input name="list[price]" type="number" placeholder="1200" class="form-control" required/>
+<div  class="invalid-feedback">
+        Please Enter a valid price
+      </div>
+</div>
+
+<div class="mb-3 col-md-8">
+<label for="country" class="form-label">Country</label>
+<input name="list[country]" type="text" placeholder="India" class="form-control" required/>
+<div  class="invalid-feedback">
+        Please Enter a valid Country name
+      </div>
+</div>
+    </div>
+
+
+<div class="mb-3">
+    <label for="location" class="form-label">Location</label>
+    <input name="list[location]" type="text" placeholder="Kanpur " class="form-control" required/>
+    <div  class="invalid-feedback">
+        Please Enter a valid Location
+      </div>
+</div>
+
+
+<br>
+<button class="button">Add</button>
+    </form>
+    <br>
+    <br>
+</div>
+        </div>
+    
+</body>
