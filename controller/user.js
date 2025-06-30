@@ -24,7 +24,7 @@ res.redirect("/signup");
 };
 
 module.exports.getLogin=(req,res)=>{
-    res.render("user/Login.ejs")
+    res.render("user/login.ejs")
 };
 
 module.exports.postLogin=(req,res)=>
