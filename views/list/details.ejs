@@ -90,7 +90,7 @@
   </p>
     <p class="card-text"><%=review.comment  %></p>  
 </div>
-<div class="mb-3 mt-2">
+<div class="card col-lg-5 col-md-6 col-sm-12 ms-3 mb-3">
     <form method="post" action="/lists/<%= datad.id %>/reviews/<%= review.id%>?_method=Delete" >
     <button class="btn btn-sm btn-dark">Delete</button>
 </form>
@@ -99,7 +99,7 @@
 <% } %>
 </div>
 <% } %>
-    <div class="col-6  mb-3">
+    <div class="col-lg-6 col-md-8 col-sm-12 mb-3">
       <h3>where you are</h3>
       <div id="map"></div></div>
       

@@ -96,11 +96,31 @@ font-size: 20px;
  }
 
   #map {
-      width: 80vh;
-      height: 400px;
+     width: 100%;
+  min-height: 300px;  /* mobile ke liye minimum height */
+  height: 400px;
     }
 
 .book{background-color:green;
 color:#ebebee;
 border-radius: 15px;
 padding:8px;}
+
+.starability-result,
+.starability-basic,
+.starability-grow,
+.starability-slot {
+  width: 100% !important;    /* Parent ke according adjust */
+  max-width: 150px;          /* zyada na failaaye */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+  .starability-result,
+  .starability-basic,
+  .starability-grow,
+  .starability-slot {
+    max-width: 120px !important; /* mobile me aur chhota */
+  }
+}
