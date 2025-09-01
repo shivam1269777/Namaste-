@@ -8,8 +8,8 @@
 </script>
 <body>
     <div class="row">
-        <div class="col-8 offset-2"><h2><%=datad.title %></h2></div>
-        <div class="col-6 offset-2"><div class="card list-all-show "  >
+        <div class="col-12 text-center my-2 "><h2><%=datad.title %></h2></div>
+        <div class="col-lg-6 col-md-8 col-sm-12 mx-auto"><div class="card list-all-show "  >
   <img src="<%=datad.image.url %>" class="card-img-top" alt="lists-image">
   <div class="card-body">
     <p class="card-text">
@@ -24,6 +24,11 @@
         <br>
         <b>Country:</b><%=datad.country%>
     </p>
+    <% if (!currUser) { %>
+  <div class="alert alert-info text-center" id="login-message">
+    You can book this after login
+  </div>
+<% } %>
          <% if (currUser&& currUser._id.equals(datad.owner._id)) { %> 
 
        <div class="d-buttons">
@@ -44,7 +49,8 @@
 <% } %>
   </div>
 </div></div>
-    <div class="col-8 offset-2 mb-3">
+<div class="row justify-content-center mb-3">
+    <div class="col-12 col-md-10 col-lg-8 ">
         <hr>
         <% if (currUser) { %>
         <h3>Leave Review</h3>
@@ -76,35 +82,38 @@
 
            </div>
            <br>
-           <button class="btn btn-outline-dark">Submit</button>
+           <button class="btn btn-success">Submit</button>
         </form> 
         <% } %>
 <% if(datad.reviews.length>0) {%>
-<div class="row">
+<div class=" row mt-4">
   <h4>All Reviews</h4>
         <% for(review of datad.reviews) { %>
-     <div class="card col-5 ms-3 mb-3">
+     <div class="col-12 col-md-6 col-lg-5 mb-3 d-flex justify-content-center">
+      <div class="card w-100">
   <div class="card-body">
-    <h5 class="card-title"><%= review.author.username%></h5>
+    <h5 class="card-title mx-3"><%= review.author.username%></h5>
     <p class="starability-result card-text" data-rating="<%= review.rating %>">
   </p>
-    <p class="card-text"><%=review.comment  %></p>  
+    <p class="card-text mx-3"><%=review.comment  %></p>  
 </div>
-<div class="card col-lg-5 col-md-6 col-sm-12 ms-3 mb-3">
-    <form method="post" action="/lists/<%= datad.id %>/reviews/<%= review.id%>?_method=Delete" >
+<div class="mb-3 mt-2 mx-3">
+    <form method="post" action="/lists/<%= datad.id %>/reviews/<%= review.id%>?_method=Delete "  >
     <button class="btn btn-sm btn-dark">Delete</button>
 </form>
 </div>
 </div>
+</div>
 <% } %>
 </div>
 <% } %>
+</div>
     <div class="col-lg-6 col-md-8 col-sm-12 mb-3">
       <h3>where you are</h3>
       <div id="map"></div></div>
-      
+    
     </div>
-   </div>
+</div>
    <script src="/js/map.js"></script>
    </body>
 

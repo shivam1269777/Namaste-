@@ -47,6 +47,11 @@ body {
     flex-wrap: wrap;
     text-align: center;
     background-color: #ebebee;
+
+}
+footer{
+    width:100%;
+    
 }
 
 .list-all{border: none !important;
@@ -97,8 +102,7 @@ font-size: 20px;
 
   #map {
      width: 100%;
-  min-height: 300px;  /* mobile ke liye minimum height */
-  height: 400px;
+ aspect-ratio: 1 / 1;
     }
 
 .book{background-color:green;
@@ -107,20 +111,26 @@ border-radius: 15px;
 padding:8px;}
 
 .starability-result,
-.starability-basic,
-.starability-grow,
-.starability-slot {
-  width: 100% !important;    /* Parent ke according adjust */
-  max-width: 150px;          /* zyada na failaaye */
-  display: flex;
-  flex-wrap: wrap;
+.starability-heartbeat {
+    font-size: 24px; /* default size */
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
+/* Medium screens */
+@media (max-width: 768px) {
+    .starability-result,
+    .starability-heartbeat {
+        font-size: 20px;
+    }
+}
+
+/* Small screens */
 @media (max-width: 576px) {
-  .starability-result,
-  .starability-basic,
-  .starability-grow,
-  .starability-slot {
-    max-width: 120px !important; /* mobile me aur chhota */
-  }
+    .starability-result,
+    .starability-heartbeat {
+        font-size: 16px;
+    }
 }

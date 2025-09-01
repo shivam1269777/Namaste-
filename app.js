@@ -68,6 +68,9 @@ app.use("/lists",list);
 app.use("/lists/:id/reviews",review);
 app.use("/",user);
 app.use(booking);
+app.get("/", (req,res)=>{
+  res.redirect("/lists");
+});
 
 app.all('/{*any}',(req,res,next)=>{
 next(new ExpressErr(404,"page not found"));
